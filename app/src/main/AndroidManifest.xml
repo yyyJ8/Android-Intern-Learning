@@ -25,6 +25,8 @@
         <activity
             android:name=".UserCenterActivity"
             android:exported="false" />
+        <service android:name=".MyService" />
+        <receiver android:name=".MyReceiver" />
 
     </application>
 
