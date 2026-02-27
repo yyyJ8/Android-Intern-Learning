@@ -24,7 +24,7 @@ class UserCenterActivity : AppCompatActivity(){
         setContentView(R.layout.activity_user_center)
         Log.d("Lifecycle", "UserCenterActivity onCreate")
 
-        ivAvatar = findViewById<ImageView>(R.id.iv_avatar)
+        ivAvatar = findViewById<ImageView>(R.id.iv_avatar) //两张头像的转变
         ivAvatar.setOnClickListener{
             if (isAvatar1){
                 ivAvatar.setImageResource(R.drawable.avatar2)
@@ -82,6 +82,20 @@ class UserCenterActivity : AppCompatActivity(){
             originalUsername = newNickname
             Toast.makeText(this, "昵称修改成功！", Toast.LENGTH_SHORT).show()
             Log.d("ReturnData", "个人中心页返回新昵称：$newNickname")
+        }
+
+        val btnGoRecycler = findViewById<Button>(R.id.btn_go_recycler)// 跳转到RecyclerActivity（列表页）
+        btnGoRecycler.setOnClickListener {
+
+            val intent = Intent(this, RecyclerActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnGetWeather = findViewById<Button>(R.id.btn_get_weather)
+        btnGetWeather.setOnClickListener {
+            // 跳转到NetworkActivity（天气查询页）
+            val intent = Intent(this, NetworkActivity::class.java)
+            startActivity(intent)
         }
     }
     override fun onStart() {

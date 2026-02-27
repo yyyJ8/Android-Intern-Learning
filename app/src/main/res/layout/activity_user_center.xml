@@ -71,7 +71,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:visibility="gone"/>
-    
+    <Button
+        android:id="@+id/btn_go_recycler"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="查看新闻列表"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_get_weather"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_get_weather"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="查询天气"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"/>
     <!-- 退出登录按钮 -->
     <Button
         android:id="@+id/btn_logout"

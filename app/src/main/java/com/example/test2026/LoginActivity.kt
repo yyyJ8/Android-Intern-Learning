@@ -32,7 +32,9 @@ class LoginActivity : AppCompatActivity() {
             Log.d("ReturnData","登录页接受新的昵称：$newNickname")
         }
     }
-
+    //registerForActivityResult 启动新页面并接收返回数据
+    //ActivityResultContracts.StartActivityForResult() 使用系统预置的协议，表示要启动一个Activity并等待结果
+    //
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
